@@ -39,6 +39,14 @@ public class ImageController {
             @RequestParam("image") MultipartFile file,
             @RequestParam String folder
     ){
-
+        try {
+            String imageUrl = cloudinaryService.uploadImage(file,folder);
+            return ResponseEntity.ok((Map.of(
+                    "message", "imagen subida exitosamente",
+                    "url", imageUrl
+            )));
+        }catch (IOException e){
+            return ResponseEntity.internalServerError().body("Error al subir la imagen");
+        }
     }
 }
