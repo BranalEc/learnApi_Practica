@@ -33,4 +33,12 @@ public class ImageController {
             return ResponseEntity.internalServerError().body("Erro al subir la imagen");
         }
     }
+
+    @PostMapping("/upload-to-folder")
+    public ResponseEntity<?> uploadImageToFolder(
+            @RequestParam("image") MultipartFile file,
+            @RequestParam String folder
+    ){
+
+    }
 }

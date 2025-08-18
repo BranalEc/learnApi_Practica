@@ -56,7 +56,7 @@ public class CloudinaryService {
         Map<String, Object> options = ObjectUtils.asMap(
                     "folder", folder,
                 "public_id", uniqueFileName,
-                "use_filename", false,
+                "use_filename", false,  //Para ocupar el nombre de la imagen
                 "unique_filename", false,
                 "overwrite", false,
                 "resource_type", "auto",

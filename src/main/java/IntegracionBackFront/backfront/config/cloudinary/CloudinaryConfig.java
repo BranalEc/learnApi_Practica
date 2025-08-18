@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.HashMap;
 import java.util.Map;
 
+//Estamos configurando lo que se va a ver de las imagenes
 @Configuration
 public class CloudinaryConfig {
     private String cloudName;
